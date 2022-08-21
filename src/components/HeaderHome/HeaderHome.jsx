@@ -45,9 +45,9 @@ export default function HeaderHome() {
                 <NavLink className="dropdown-item" to="/usestate">
                   UseState
                 </NavLink>
-                <a className="dropdown-item" href="#">
-                  Action 2
-                </a>
+                <NavLink className="dropdown-item" to="/useeffect">
+                  UseEffect
+                </NavLink>
               </div>
             </li>
           </ul>
