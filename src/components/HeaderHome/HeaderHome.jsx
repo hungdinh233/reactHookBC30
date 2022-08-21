@@ -48,6 +48,18 @@ export default function HeaderHome() {
                 <NavLink className="dropdown-item" to="/useeffect">
                   UseEffect
                 </NavLink>
+                <NavLink className="dropdown-item" to="/usecallback">
+                  UseCallback
+                </NavLink>
+                <NavLink className="dropdown-item" to="/usememodemo">
+                  UseMemoDemo
+                </NavLink>
+                <NavLink className="dropdown-item" to="/userefdemo">
+                  UseRefDemo
+                </NavLink>
+                <NavLink className="dropdown-item" to="/demoredux">
+                  Demo Redux (number)
+                </NavLink>
               </div>
             </li>
           </ul>
