@@ -42,7 +42,6 @@ export default function UseEffectDemo(props) {
 
   useEffect(() => {
     //dependency (tham số thứ 2 là mảng thì hàm này chạy 1 lần duy nhất sau khi giao diện render lần đầu tiên)
-
     // tương đương componentDidMount
 
     getAPI();
