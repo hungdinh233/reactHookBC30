@@ -35,28 +35,30 @@ export default function Detail() {
           <h1>{productDetail.name}</h1>
         </div>
       </div>
-      <h3>---RELATED PRODUCT---</h3>
-      <div className="row mt-2">
-        {/* toán tử 7: optionail chaining */}
-        {productDetail.relatedProducts?.map((item, index) => {
-          return (
-            <div className="col-3 mt-4" key={index}>
-              <div className="card">
-                <img src={item.image} alt={item.name} />
-                <div className="card-body bg-dark text-white">
-                  <p>{item.name}</p>
-                  <p>$ {item.price}</p>
-                  <NavLink
-                    className="btn btn-secondary"
-                    to={`/detail/${item.id}`}
-                  >
-                    View detail
-                  </NavLink>
+      <div className="container">
+        <h3 className="text-center">---RELATED PRODUCT---</h3>
+        <div className="row mt-2">
+          {/* toán tử 7: optionail chaining */}
+          {productDetail.relatedProducts?.map((item, index) => {
+            return (
+              <div className="col-3 mt-4" key={index}>
+                <div className="card">
+                  <img src={item.image} alt={item.name} />
+                  <div className="card-body bg-dark text-white">
+                    <p>{item.name}</p>
+                    <p>$ {item.price}</p>
+                    <NavLink
+                      className="btn btn-secondary"
+                      to={`/detail/${item.id}`}
+                    >
+                      View detail
+                    </NavLink>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

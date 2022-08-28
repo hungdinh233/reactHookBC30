@@ -26,9 +26,19 @@ export default function HeaderHome() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                <NavLink to="/detail">Detail</NavLink>
-              </a>
+              <NavLink className="nav-link" to="/detail">
+                Detail
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/search">
+                Search
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/antdemo">
+                Antdesign demo
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -65,6 +75,9 @@ export default function HeaderHome() {
                 </NavLink>
                 <NavLink className="dropdown-item" to="/usehookrouter">
                   LoginDemo (UseHookRouter)
+                </NavLink>
+                <NavLink className="dropdown-item" to="/customhook">
+                  UseRoute (customhook)
                 </NavLink>
               </div>
             </li>

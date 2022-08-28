@@ -19,6 +19,13 @@ import DemoFacebookAp from "./pages/DemoFacebookApp/DemoFacebookAp";
 import ReactForm from "./pages/HookDemo/UseHookRouter/LoginDemo/LoginDemo";
 import Home from "./pages/HookDemo/UseHookRouter/DemoUseParam/Home";
 import Detail from "./pages/HookDemo/UseHookRouter/DemoUseParam/Detail";
+import DemoUseSearchParam from "./pages/HookDemo/UseHookRouter/DemoUseSearchParam/DemoUseSearchParam";
+import DemoUseRoute from "./pages/HookDemo/CustomHooks/DemoUseRoute";
+import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+// --- antdesign ----
+import AntDesignDemo from "./pages/AntDesignDemo/AntDesignDemo";
+//import scss sau file antdesign để nó ở dưới nó mới có thể đè thằng ở trên
+import "./assets/scss/styles.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -30,6 +37,8 @@ root.render(
           <Route path="detail">
             <Route path=":id" element={<Detail />}></Route>
           </Route>
+          <Route path="search" element={<DemoUseSearchParam />}></Route>
+          <Route path="customhook" element={<DemoUseRoute />}></Route>
           <Route path="usestate" element={<UseStateDemo />}></Route>
           <Route path="useeffect" element={<UseEffectDemo />}></Route>
           <Route path="usecallback" element={<UseCallBackDemo />}></Route>
@@ -38,6 +47,7 @@ root.render(
           <Route path="demoredux" element={<DemoNumber />}></Route>
           <Route path="fbapp" element={<DemoFacebookAp />}></Route>
           <Route path="usehookrouter" element={<ReactForm />}></Route>
+          <Route path="antdemo" element={<AntDesignDemo />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
