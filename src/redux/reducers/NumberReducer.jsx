@@ -4,7 +4,7 @@ const initialState = 1;
 
 const numberReducer = createSlice({
   name: "numberReducer",
-  initialState,
+  initialState, //giá tị ban đầu của state
   reducers: {
     changeNumber: (state, action) => {
       state = action.payload;

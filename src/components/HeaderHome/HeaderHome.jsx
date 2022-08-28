@@ -27,7 +27,7 @@ export default function HeaderHome() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Link
+                <NavLink to="/detail">Detail</NavLink>
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -59,6 +59,12 @@ export default function HeaderHome() {
                 </NavLink>
                 <NavLink className="dropdown-item" to="/demoredux">
                   Demo Redux (number)
+                </NavLink>
+                <NavLink className="dropdown-item" to="/fbapp">
+                  Facebook App
+                </NavLink>
+                <NavLink className="dropdown-item" to="/usehookrouter">
+                  LoginDemo (UseHookRouter)
                 </NavLink>
               </div>
             </li>
