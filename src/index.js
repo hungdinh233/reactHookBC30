@@ -26,6 +26,7 @@ import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
 import AntDesignDemo from "./pages/AntDesignDemo/AntDesignDemo";
 //import scss sau file antdesign để nó ở dưới nó mới có thể đè thằng ở trên
 import "./assets/scss/styles.scss";
+import Login from "./pages/Login/Login";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -38,6 +39,7 @@ root.render(
             <Route path=":id" element={<Detail />}></Route>
           </Route>
           <Route path="search" element={<DemoUseSearchParam />}></Route>
+          <Route path="login" element={<Login/>}></Route>
           <Route path="customhook" element={<DemoUseRoute />}></Route>
           <Route path="usestate" element={<UseStateDemo />}></Route>
           <Route path="useeffect" element={<UseEffectDemo />}></Route>

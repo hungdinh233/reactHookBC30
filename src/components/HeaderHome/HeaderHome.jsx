@@ -21,7 +21,7 @@ export default function HeaderHome() {
         <div className="collapse navbar-collapse" id="collapsibleNavId">
           <ul className="navbar-nav me-auto mt-2 mt-lg-0">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="">
                 Home <span className="visually-hidden">(current)</span>
               </a>
             </li>
@@ -33,6 +33,11 @@ export default function HeaderHome() {
             <li className="nav-item">
               <NavLink className="nav-link" to="/search">
                 Search
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/login">
+                Login (authorized token)
               </NavLink>
             </li>
             <li className="nav-item">
