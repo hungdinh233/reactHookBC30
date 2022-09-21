@@ -10,7 +10,7 @@ export default function UseStateDemo() {
   [giá trị thay đổi, hàm set lại giá trị thay đổi] =  useState(giá trị mặc định ban đầu)
   
   */
-  const [like, setLike] = useState(1);
+  const [like, setLike] = useState(0);
   return (
     <div className="container">
       <div className="card w-25">
@@ -30,7 +30,7 @@ export default function UseStateDemo() {
           </button>
         </div>
       </div>
-      <BaiTapChonXe/>
+      <BaiTapChonXe />
     </div>
   );
 }

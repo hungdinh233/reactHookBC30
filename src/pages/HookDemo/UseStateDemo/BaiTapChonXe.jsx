@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function BaiTapChonXe() {
-  const [img, setImg] = useState("./img/products/black-car.jpg");
+  const [img, setImg] = useState("./img/products/red-car.jpg");
   const handleChangeColor = (color) => {
     setImg(`./img/products/${color}-car.jpg`);
   };
@@ -10,8 +10,8 @@ export default function BaiTapChonXe() {
       <h3>Bài tập chọn xe</h3>
       <div className="row">
         <div className="col-6">
-          <img src={img} alt="car" className="w-100" />
-        </div>
+          <img src={img} alt="red-car" width={650} />
+        </div> 
 
         <div className="col-6">
           <button

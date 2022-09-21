@@ -1,8 +1,11 @@
 import React from "react";
 import { useFormik } from "formik";
+import { useDispatch } from "react-redux";
+import { loginApi } from "../../redux/reducers/userReducer";
 import * as Yup from "yup";
 
 export default function Login(props) {
+  const dispatch = useDispatch();
   //lấy dữ liệu từ form
   const frm = useFormik({
     initialValues: {
@@ -16,13 +19,14 @@ export default function Login(props) {
         .email("email không đúng định dạng"),
       password: Yup.string()
         .required("password không được bỏ trống")
-        .min(6, "password từ 6 đến 32 kí tự")
-        .max(32, "(password từ 6 đến 32 kí tự"),
-        //.matches() => cái này để check đúng 100%
+        .min(1, "password từ 1 đến 32 kí tự")
+        .max(32, "(password từ 1 đến 32 kí tự"),
+      //.matches() => cái này để check đúng 100%
     }),
 
     onSubmit: (values) => {
-      console.log(values);
+      // console.log(values);
+      dispatch(loginApi(values));
     },
   });
   return (

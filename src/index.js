@@ -28,10 +28,18 @@ import AntDesignDemo from "./pages/AntDesignDemo/AntDesignDemo";
 import "./assets/scss/styles.scss";
 import Login from "./pages/Login/Login";
 
+//cấu hình history chuyển hướng không cần hook navigate
+import { unstable_HistoryRouter as HistoryRouter } from "react-router-dom";
+import {createBrowserHistory} from "history"
+//cấu hình history (chuyển hướng không cần hook navigate)
+export const history = createBrowserHistory({window})
+
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <HistoryRouter history={history}>
       <Routes>
         <Route path="" element={<App />}>
           <Route index element={<Home />}></Route>
@@ -39,7 +47,7 @@ root.render(
             <Route path=":id" element={<Detail />}></Route>
           </Route>
           <Route path="search" element={<DemoUseSearchParam />}></Route>
-          <Route path="login" element={<Login/>}></Route>
+          <Route path="login" element={<Login />}></Route>
           <Route path="customhook" element={<DemoUseRoute />}></Route>
           <Route path="usestate" element={<UseStateDemo />}></Route>
           <Route path="useeffect" element={<UseEffectDemo />}></Route>
@@ -52,7 +60,7 @@ root.render(
           <Route path="antdemo" element={<AntDesignDemo />}></Route>
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HistoryRouter>
   </Provider>
 );
 

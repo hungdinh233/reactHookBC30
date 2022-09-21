@@ -1,8 +1,12 @@
 //rfc
 import React from "react";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 export default function HeaderHome() {
+  // const {userLogin} =  useSelector(state => state.userReducer);
+  //  const renderLoginNavItem = () =>{
+  //  }
   return (
     <div>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
